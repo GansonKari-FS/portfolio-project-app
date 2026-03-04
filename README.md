@@ -1,113 +1,158 @@
-# portfolio-project-app
-
-
 Job Hunter Tracker
 Project Overview
 
-Job Hunter Tracker is a full-stack MERN application designed to simplify job hunting. Users can search for remote job listings via the Remotive API, view detailed job descriptions, save jobs, and track the progress of their applications. The app offers a clean, modern design with a focus on user experience.
+Job Hunter Tracker is a full-stack MERN application designed to help users search for remote job listings and track their job applications. The application integrates with the Remotive Remote Jobs API to retrieve real-time job data and allows users to save jobs and monitor their application progress through different stages.
 
-Features
+The application focuses on providing a clean and intuitive Soft Modern user interface while demonstrating full-stack development skills including React, Node.js, Express, and MongoDB.
 
-Search Jobs: Users can search remote jobs with filters like category or company.
+Functional Specification
+Application Purpose
 
-Job Details: Each listing has a dedicated detail page with full job descriptions and a link to apply.
+The purpose of Job Hunter Tracker is to help users organize their job search by allowing them to:
 
-Save Jobs: Users can save jobs to their personal tracker.
+• Search remote job listings
+• View detailed job information
+• Save interesting jobs
+• Track their application progress
 
-Application Pipeline: Users can categorize saved jobs into statuses like “Applied” or “Interviewing.”
+The system is designed to make job searching easier by combining job discovery with application tracking.
 
-Settings: Users can toggle themes (light/dark) and clear their saved job data.
+Target Users
 
-Tech Stack
+The target users for this application include:
 
-Frontend: React, React Router, Tailwind CSS, Framer Motion.
+• Individuals searching for remote jobs
+• Students preparing to enter the workforce
+• Professionals looking for career opportunities
 
-Backend: Node.js with Express.
+Core Features
+Dashboard
 
-Database: MongoDB for saved jobs and statuses.
+The dashboard will serve as the main landing page for the application.
 
-API: Remotive Remote Jobs API.
+Features include:
+• Overview of saved jobs
+• Job application pipeline (Saved, Applied, Interview, Offer, Rejected)
+• Quick access to search functionality
 
-Setup Instructions
+Job Search
 
-Clone the repository:
-git clone <your-repo-url>
+The search page allows users to search for remote jobs using the Remotive API.
 
-Install dependencies:
+Features include:
+• Keyword job search
+• Filter options
+• Job listing cards showing title, company, and location
+• Link to detailed job view
 
-Frontend: Navigate into the client folder and run npm install.
+Job Detail Page
 
-Backend: Navigate into the server folder and run npm install.
+The job detail page provides full information about a specific job.
 
-Set up environment variables:
+Features include:
+• Job title and company information
+• Job description
+• Tags or categories
+• Button to save job to tracker
+• Link to apply on the original Remotive listing
 
-Create a .env file in the server directory.
+Each job will include attribution to Remotive as required by their API terms.
 
-Add your MongoDB connection string as MONGO_URI.
+User / Settings Page
 
-Start the development servers:
+The settings page allows users to manage their saved job data and preferences.
 
-Backend: Run npm start in the server folder.
+Features include:
+• View saved jobs
+• Update job application status
+• Remove saved jobs
+• Toggle theme (optional enhancement)
 
-Frontend: Run npm start in the client folder.
+Data Storage
 
-Usage
+The application will use MongoDB to store saved job listings and application status data.
 
-Visit the homepage to see your application pipeline and stats.
+Data stored will include:
 
-Use the search page to find jobs based on category, company, or keywords.
+• Job ID
+• Job title
+• Company name
+• Location
+• Job status (Saved, Applied, Interview, Offer, Rejected)
+• Date saved
 
-View job details and click “Save” to add them to your tracker.
+API Integration
 
-In the pipeline, update statuses (e.g., Applied, Interviewing) and manage your job search process.
+The application will retrieve job data using the Remotive Remote Jobs API.
 
-In settings, toggle light/dark themes or clear saved data.
+Endpoint used:
 
-Milestones
-Milestone 1 (Week 1)
+GET https://remotive.com/api/remote-jobs
 
-Defined project scope, selected the Remotive API.
+The API returns JSON data that includes job listings, company information, and application links.
 
-Completed Functional Spec detailing the app’s goals and timeline.
+Each job displayed in the application will include attribution to Remotive and link back to the original job listing.
 
-Created Figma wireframes for all key views (Dashboard, Search, Detail, Settings).
+Technology Stack
 
-Established GitHub repo with main, dev, and milestone branches.
+Frontend
+• React
+• React Router
+• Tailwind CSS
+• Framer Motion
 
-Milestone 2 (Week 2)
+Backend
+• Node.js
+• Express
 
-Build the React frontend with Tailwind styling and React Router.
+Database
+• MongoDB
 
-Integrate the Remotive API to display job listings with filters.
+API
+• Remotive Remote Jobs API
 
-Milestone 3 (Week 3)
+Milestone Timeline
+Week 1
 
-Implement job detail view.
+• Decide project concept and theme
+• Choose API
+• Create Functional Specification
+• Design wireframes in Figma
+• Set up Git repository and project branches
 
-Connect MongoDB to store saved jobs and statuses.
+Week 2
 
-Create CRUD operations for status tracking.
+• Build React frontend
+• Implement routing and UI layout
+• Connect application to Remotive API
+• Display job search results
 
-Milestone 4 (Week 4)
+Week 3
 
-Enhance UI with Framer Motion animations and theme toggle.
+• Build backend with Node.js and Express
+• Connect MongoDB database
+• Implement job saving functionality
+• Add job status tracking
 
-Refine user settings page and add final UX touches.
+Week 4
 
-Test the app, finalize the README, and prepare for submission.
+• Refine user interface and design
+• Implement animations and UI polish
+• Test application functionality
+• Finalize documentation and project submission
 
 Attribution
 
-All job data is provided by the Remotive Remote Jobs API. Each job listing includes a link back to the original Remotive posting, and a footer note credits Remotive as the data source.
+Job data is provided by the Remotive Remote Jobs API.
+
+All job listings include a link back to the original posting on Remotive to comply with API usage requirements.
 
 Future Enhancements
 
-Add user authentication so users can log in and manage their own job lists.
+Possible improvements for future versions of the application include:
 
-Implement notifications for job deadlines or status updates.
-
-Add more filters (e.g., salary range, job type) to enhance search functionality.
-
-Include a drag-and-drop Kanban board for managing job application stages visually.
-
-Integrate a second API, perhaps for company reviews or salary insights.
+• User authentication and accounts
+• Advanced job filters (salary, experience level, etc.)
+• Drag-and-drop job application pipeline
+• Email notifications for saved jobs
+• Integration with additional job APIs
