@@ -1,158 +1,24 @@
-Job Hunter Tracker
-Project Overview
+Project name: CareerPathTracker
 
-Job Hunter Tracker is a full-stack MERN application designed to help users search for remote job listings and track their job applications. The application integrates with the Remotive Remote Jobs API to retrieve real-time job data and allows users to save jobs and monitor their application progress through different stages.
+Project overview:
+CareerPathTracker is a job search tracking application designed to help users organize saved jobs, monitor applications in progress, and keep up with interview activity in one place. The goal of the app is to provide a clean, simple dashboard where users can manage their job search process more efficiently.
 
-The application focuses on providing a clean and intuitive Soft Modern user interface while demonstrating full-stack development skills including React, Node.js, Express, and MongoDB.
+Milestone 2 progress:
+For Milestone 2, I created the working shell of the React application and implemented navigation using React Router. The project now includes four main pages: Dashboard, Search, Details, and Settings. The Dashboard page displays job statistics and dynamically loads sample job data using Axios. The Search, Details, and Settings pages currently contain placeholder content that will be expanded in future milestones.
 
-Functional Specification
-Application Purpose
+Libraries used:
+This project currently uses React Router DOM for navigation and Axios for retrieving API data.
 
-The purpose of Job Hunter Tracker is to help users organize their job search by allowing them to:
+Current work / next steps:
+My next steps are to continue improving the user interface, add more realistic search and detail functionality, and begin building out more interactive features for the remaining milestones.
 
-• Search remote job listings
-• View detailed job information
-• Save interesting jobs
-• Track their application progress
+After you save the README, run these commands in the terminal:
 
-The system is designed to make job searching easier by combining job discovery with application tracking.
+git add README.md
+git commit -m "Updated README for Milestone 2 progress"
+git push origin dev
 
-Target Users
+Then create the final milestone branch if you have not already:
 
-The target users for this application include:
-
-• Individuals searching for remote jobs
-• Students preparing to enter the workforce
-• Professionals looking for career opportunities
-
-Core Features
-Dashboard
-
-The dashboard will serve as the main landing page for the application.
-
-Features include:
-• Overview of saved jobs
-• Job application pipeline (Saved, Applied, Interview, Offer, Rejected)
-• Quick access to search functionality
-
-Job Search
-
-The search page allows users to search for remote jobs using the Remotive API.
-
-Features include:
-• Keyword job search
-• Filter options
-• Job listing cards showing title, company, and location
-• Link to detailed job view
-
-Job Detail Page
-
-The job detail page provides full information about a specific job.
-
-Features include:
-• Job title and company information
-• Job description
-• Tags or categories
-• Button to save job to tracker
-• Link to apply on the original Remotive listing
-
-Each job will include attribution to Remotive as required by their API terms.
-
-User / Settings Page
-
-The settings page allows users to manage their saved job data and preferences.
-
-Features include:
-• View saved jobs
-• Update job application status
-• Remove saved jobs
-• Toggle theme (optional enhancement)
-
-Data Storage
-
-The application will use MongoDB to store saved job listings and application status data.
-
-Data stored will include:
-
-• Job ID
-• Job title
-• Company name
-• Location
-• Job status (Saved, Applied, Interview, Offer, Rejected)
-• Date saved
-
-API Integration
-
-The application will retrieve job data using the Remotive Remote Jobs API.
-
-Endpoint used:
-
-GET https://remotive.com/api/remote-jobs
-
-The API returns JSON data that includes job listings, company information, and application links.
-
-Each job displayed in the application will include attribution to Remotive and link back to the original job listing.
-
-Technology Stack
-
-Frontend
-• React
-• React Router
-• Tailwind CSS
-• Framer Motion
-
-Backend
-• Node.js
-• Express
-
-Database
-• MongoDB
-
-API
-• Remotive Remote Jobs API
-
-Milestone Timeline
-Week 1
-
-• Decide project concept and theme
-• Choose API
-• Create Functional Specification
-• Design wireframes in Figma
-• Set up Git repository and project branches
-
-Week 2
-
-• Build React frontend
-• Implement routing and UI layout
-• Connect application to Remotive API
-• Display job search results
-
-Week 3
-
-• Build backend with Node.js and Express
-• Connect MongoDB database
-• Implement job saving functionality
-• Add job status tracking
-
-Week 4
-
-• Refine user interface and design
-• Implement animations and UI polish
-• Test application functionality
-• Finalize documentation and project submission
-
-Attribution
-
-Job data is provided by the Remotive Remote Jobs API.
-
-All job listings include a link back to the original posting on Remotive to comply with API usage requirements.
-
-Future Enhancements
-
-Possible improvements for future versions of the application include:
-
-• User authentication and accounts
-• Advanced job filters (salary, experience level, etc.)
-• Drag-and-drop job application pipeline
-• Email notifications for saved jobs
-• Integration with additional job APIs
+git checkout -b Ganson_Kari_Milestone2
+git push origin Ganson_Kari_Milestone2
