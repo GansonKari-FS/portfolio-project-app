@@ -1,25 +1,30 @@
-import { Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation.jsx";
-import DashboardPage from "./pages/DashboardPage.jsx";
-import SearchPage from "./pages/SearchPage.jsx";
-import DetailsPage from "./pages/DetailsPage.jsx";
-import SettingsPage from "./pages/SettingsPage.jsx";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Dashboard from "./pages/Dashboard";
+import SearchJobs from "./pages/SearchJobs";
+import SavedJobs from "./pages/SavedJobs";
+import JobDetails from "./pages/JobDetails";
+import Settings from "./pages/Settings";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <div className="app-shell">
-      <Navigation />
+    <Router>
+      <div className="bg-light min-vh-100">
+        <Navigation />
 
-      <main className="page-content">
-        <Routes>
-          <Route path="/" element={<DashboardPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/details" element={<DetailsPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-        </Routes>
-      </main>
-    </div>
+        <div className="container py-4">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/search" element={<SearchJobs />} />
+            <Route path="/saved" element={<SavedJobs />} />
+            <Route path="/details/:id" element={<JobDetails />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
