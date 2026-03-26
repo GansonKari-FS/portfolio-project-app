@@ -1,48 +1,27 @@
-# CareerPathTracker
+# Job Hunter Tracker
 
-## Project Overview
+# Description
 
-CareerPathTracker is a job search tracking application designed to help users organize saved jobs, monitor applications in progress, and keep up with interview activity in one place.
+A full-stack MERN-style application that helps users track job applications, save opportunities, and monitor interview progress.
 
-## Features
+# Features
 
-- View job listings on the Dashboard
-- Save and unsave jobs
-- Track job application status (Saved, Applied, Interview)
-- View detailed job information
-- Search jobs
-- Persist saved jobs using localStorage
+- Search remote jobs (Remotive API)
+- Save jobs to local storage
+- Track application status (Saved, Applied, Interview)
+- Dashboard analytics view
+- Settings personalization
 
-## Technologies Used
+# Tech Used
 
 - React (Vite)
-- React Router DOM (navigation)
-- Axios (API data fetching)
-- CSS (custom styling)
+- React Router
+- Axios
+- React Icons
+- Bootstrap
+- Local Storage
 
-## Pages
+# How to Run
 
-- Dashboard
-- Search
-- Details
-- Settings
-
-## Current Progress (Milestone 3)
-
-- Implemented navigation using React Router
-- Connected API data using Axios
-- Built Dashboard with job statistics
-- Created reusable JobCard component
-- Implemented job saving functionality
-- Added localStorage persistence
-
-## Future Improvements
-
-- Connect to a real backend (MongoDB)
-- Add user authentication
-- Improve filtering and search
-- Add analytics and charts
-
-## Author
-
-Kari Ganson
+npm install
+npm run dev

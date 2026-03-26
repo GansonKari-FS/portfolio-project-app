@@ -22,9 +22,20 @@ function SearchJobs() {
 
   return (
     <div className="page-shell">
+      <div className="hero-banner mb-4">
+        <h3 className="mb-2 d-flex align-items-center gap-2">
+          <span style={{ fontSize: "1.35rem" }}>🔎</span>
+          Find Your Next Opportunity
+        </h3>
+        <p className="mb-0">
+          Explore remote roles, save the best matches, and open full job details
+          in one click.
+        </p>
+      </div>
+
       <h1 className="fw-bold mb-2">Search Jobs</h1>
       <p className="hero-note">
-        Browse remote opportunities, save roles you like, and view more details.
+        Browse remote opportunities and save jobs that match your goals.
       </p>
 
       {loading ? (

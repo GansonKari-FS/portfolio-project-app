@@ -26,4 +26,8 @@ function App() {
   );
 }
 
+<footer className="text-center mt-5 mb-3 text-muted small">
+  © {new Date().getFullYear()} Job Hunter Tracker — Built by Kari Ganson
+</footer>;
+
 export default App;
