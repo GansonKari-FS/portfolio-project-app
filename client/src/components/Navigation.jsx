@@ -5,19 +5,44 @@ function Navigation() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
       <div className="container">
-        <span className="navbar-brand fw-bold">Job Hunter Tracker</span>
+        <NavLink className="navbar-brand fw-bold" to="/">
+          Job Hunter Tracker
+        </NavLink>
 
         <div className="navbar-nav ms-auto">
-          <NavLink className="nav-link" to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active fw-bold text-warning" : "nav-link"
+            }
+          >
             Dashboard
           </NavLink>
-          <NavLink className="nav-link" to="/search">
+
+          <NavLink
+            to="/search"
+            className={({ isActive }) =>
+              isActive ? "nav-link active fw-bold text-warning" : "nav-link"
+            }
+          >
             Search
           </NavLink>
-          <NavLink className="nav-link" to="/saved">
+
+          <NavLink
+            to="/saved"
+            className={({ isActive }) =>
+              isActive ? "nav-link active fw-bold text-warning" : "nav-link"
+            }
+          >
             Saved Jobs
           </NavLink>
-          <NavLink className="nav-link" to="/settings">
+
+          <NavLink
+            to="/settings"
+            className={({ isActive }) =>
+              isActive ? "nav-link active fw-bold text-warning" : "nav-link"
+            }
+          >
             Settings
           </NavLink>
         </div>

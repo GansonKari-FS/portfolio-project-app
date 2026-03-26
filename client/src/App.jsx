@@ -13,7 +13,6 @@ function App() {
     <Router>
       <div className="bg-light min-vh-100">
         <Navigation />
-
         <div className="container py-4">
           <Routes>
             <Route path="/" element={<Dashboard />} />
