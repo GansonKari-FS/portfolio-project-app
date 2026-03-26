@@ -3,21 +3,46 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-      <div className="container">
-        <span className="navbar-brand fw-bold">Job Hunter Tracker</span>
+    <nav className="navbar navbar-expand-lg navbar-dark shadow-sm py-3">
+      <div className="container page-shell">
+        <NavLink className="navbar-brand fw-bold" to="/">
+          Job Hunter Tracker
+        </NavLink>
 
-        <div className="navbar-nav ms-auto">
-          <NavLink className="nav-link" to="/">
+        <div className="navbar-nav ms-auto gap-lg-2">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link fw-bold text-warning" : "nav-link"
+            }
+          >
             Dashboard
           </NavLink>
-          <NavLink className="nav-link" to="/search">
+
+          <NavLink
+            to="/search"
+            className={({ isActive }) =>
+              isActive ? "nav-link fw-bold text-warning" : "nav-link"
+            }
+          >
             Search
           </NavLink>
-          <NavLink className="nav-link" to="/saved">
+
+          <NavLink
+            to="/saved"
+            className={({ isActive }) =>
+              isActive ? "nav-link fw-bold text-warning" : "nav-link"
+            }
+          >
             Saved Jobs
           </NavLink>
-          <NavLink className="nav-link" to="/settings">
+
+          <NavLink
+            to="/settings"
+            className={({ isActive }) =>
+              isActive ? "nav-link fw-bold text-warning" : "nav-link"
+            }
+          >
             Settings
           </NavLink>
         </div>

@@ -13,27 +13,37 @@ function SavedJobs() {
     setJobs(getSavedJobs());
   };
 
+  const getBadgeClass = (status) => {
+    if (status === "Applied") return "badge-soft badge-applied";
+    if (status === "Interview") return "badge-soft badge-interview";
+    return "badge-soft badge-saved";
+  };
+
   return (
-    <div>
-      <h1 className="fw-bold mb-4">Saved Jobs</h1>
+    <div className="page-shell">
+      <h1 className="fw-bold mb-2">Saved Jobs</h1>
+      <p className="hero-note">
+        Manage your saved jobs, track your progress, and stay organized.
+      </p>
 
       {jobs.length === 0 ? (
-        <div className="alert alert-info">
-          No saved jobs yet. Go to the Search page and save some!
+        <div className="empty-state">
+          No saved jobs yet. Go to Search and save some!
         </div>
       ) : (
         <div className="row g-4">
           {jobs.map((job) => (
             <div key={job.id} className="col-md-6 col-lg-4">
-              <div className="card shadow-sm border-0 p-3 h-100 d-flex flex-column">
-                <h5 className="fw-semibold">{job.title}</h5>
+              <div className="card border-0 p-4 h-100 d-flex flex-column">
+                <h5 className="job-card-title mb-1">{job.title}</h5>
 
-                <p className="text-muted mb-1">{job.company_name}</p>
+                <p className="job-meta mb-2">{job.company_name}</p>
 
-                <p className="small">
-                  <strong>Status:</strong>{" "}
-                  <span className="badge bg-secondary">{job.status}</span>
-                </p>
+                <div className="mb-3">
+                  <span className={getBadgeClass(job.status)}>
+                    {job.status}
+                  </span>
+                </div>
 
                 <div className="mt-auto d-flex flex-column gap-2">
                   <Link
