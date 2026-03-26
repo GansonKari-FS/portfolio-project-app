@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Dashboard from "./pages/Dashboard";
 import SearchJobs from "./pages/SearchJobs";
 import SavedJobs from "./pages/SavedJobs";
@@ -13,7 +12,6 @@ function App() {
     <Router>
       <div className="bg-light min-vh-100">
         <Navigation />
-
         <div className="container py-4">
           <Routes>
             <Route path="/" element={<Dashboard />} />
